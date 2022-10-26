@@ -1,18 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
+import { Input, Button, Icon } from 'react-native-elements';
 
-const indexScreen = ()=> {
+const indexScreen = () => {
 
-  <View> 
+  return (
+    <View style={[styles.container, {
+      flexDirection: "column"
+    }]}>
 
-    
-  </View>
+
+        <View style={{top:"-300px"}}>
+        <Text style={{color:"white", fontSize:"50px", bottom:"300px"}}>DOE AQUI!</Text>      
+        </View> 
+
+        <View> 
+          <Input placeholder="Login" style={{}}/>
+          <Input placeholder="Senha" style={{}}/>
+        </View>
+
+
+    </View>
+
+
+
+  );
 };
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -21,8 +39,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
+
+export default indexScreen;
